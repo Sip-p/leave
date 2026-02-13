@@ -59,6 +59,16 @@ Create `client/.env` if API runs on different URL:
 VITE_API_URL=http://localhost:3000/api
 ```
 
+## Deployment
+
+### Vercel (Frontend)
+1. Import the repo on [Vercel](https://vercel.com/new)
+2. Set **Root Directory** to `client`
+3. Add env var: `VITE_API_URL` = your backend API URL (e.g. `https://your-api.onrender.com/api`)
+
+### Backend (Render / Railway)
+Deploy the `server` folder to Render or Railway. Set `MONGOURI` and `JWT_SECRET`. Use the deployed URL as `VITE_API_URL` above.
+
 ## Default Ports
 - Backend: `http://localhost:3000`
 - Frontend: `http://localhost:5173`
