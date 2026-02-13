@@ -1,0 +1,17 @@
+# Render Blueprint - Deploys the backend API
+# https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: leave-api
+    runtime: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGOURI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
